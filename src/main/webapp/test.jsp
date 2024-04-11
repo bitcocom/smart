@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java"  pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,7 +9,10 @@
     <title>Document</title>
 </head>
 <body>
-     Hello Java Spring~~~(박매일)<br/>
-     지금 시간은? 2024-04-11 오후 12:39:20(정적인 데이터)
+          Hello Java Spring~~~(박매일)<br/>
+          <%
+              java.util.Date date=new java.util.Date();
+          %>
+          지금 시간은? <%=date.toString()%>(동적인 데이터)
 </body>
 </html>

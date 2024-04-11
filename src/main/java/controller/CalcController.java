@@ -18,8 +18,11 @@ public class CalcController extends HttpServlet {
               // 클라이언트 폼에서 넘어온 파라메터(su1, su2)를 얻기(가져오기)  : get~~~
               int su1=Integer.parseInt(req.getParameter("su1")); // "50" --> 50
               int su2=Integer.parseInt(req.getParameter("su2"));
+              // 비즈니스로직을 담당하는 부분(Model=Service)
               int sum=MyService.hap(su1, su2);
-                resp.setContentType("text/html;charset=UTF-8");  // MIME Type
+
+              // 프리젠테이션을 담당하는 부분(View=>JSP)
+              resp.setContentType("text/html;charset=UTF-8");  // MIME Type
                 // 클라이언트에 응답할 출력 스트림(빨대)을 만들어야 한다.
                 PrintWriter out=resp.getWriter();
                 out.println("<html>");
