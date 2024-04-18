@@ -18,6 +18,9 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     // JDBC Driver API
+    implementation 'mysql:mysql-connector-java:8.0.28'
+    // MyBatis API
+    implementation 'org.mybatis:mybatis:3.5.6'
 
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
