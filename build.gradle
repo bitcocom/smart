@@ -14,6 +14,10 @@ dependencies {
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
     // JSTL API
     implementation 'javax.servlet:jstl:1.2'
+    // Lombok API
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
