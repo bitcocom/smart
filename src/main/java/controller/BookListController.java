@@ -1,6 +1,7 @@
 package controller;
 
 import entity.Book;
+import repository.BookDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,10 +21,8 @@ public class BookListController extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
          // Database(DAO)에서 책목록을 가져오기 :  List -> ArrayList
-        List<Book> list=new ArrayList<Book>();
-        list.add(new Book(1,"자바1", 12000,"홍길동", 500));
-        list.add(new Book(2,"자바2", 13000,"박길동", 600));
-        list.add(new Book(3,"자바3", 14000,"이길동", 700));
+        BookDAO dao=new BookDAO();
+        List<Book> list=dao.bookList();
         req.setAttribute("list", list); // 객체바인딩(중요)
         //  "list"---->list(번지값)
         //  View(JSP)와 연동하기(forward, dispatcher)
