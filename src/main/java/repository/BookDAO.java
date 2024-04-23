@@ -1,6 +1,7 @@
 package repository;
 
 import entity.Book;
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -33,5 +34,13 @@ public class BookDAO { // new BookDAO()
         List<Book> list=session.selectList("bookList"); // JDBC
        session.close(); // 반납
         return list;
+    }
+
+    public int bookRegister(Book book){
+        SqlSession session =sqlSessionFactory.openSession();
+        int cnt=session.insert("bookRegister", book);
+        session.commit(); // 완료(I, D, U)
+        session.close();
+        return cnt;
     }
 }
