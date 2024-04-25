@@ -5,7 +5,7 @@
 <mapper namespace="org.mybatis.example.BlogMapper">
 
   <select id="bookList" resultType="entity.Book">
-    select * from book
+    select * from book order by price desc
   </select>
 
   <insert id="bookRegister" parameterType="entity.Book">

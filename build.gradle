@@ -21,6 +21,10 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.28'
     // MyBatis API
     implementation 'org.mybatis:mybatis:3.5.2'
+    // Spring WEB MVC API
+    implementation 'org.springframework:spring-webmvc:5.3.10'
+    // Object -> XML, JSON : {       }
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
 
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'

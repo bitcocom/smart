@@ -37,7 +37,7 @@
                              </div>
                              <div class="form-group">
                                <label for="page">페이지:</label>
-                               <input type="number" class="form-control" placeholder="Enter page" id="page" title="page">
+                               <input type="number" class="form-control" placeholder="Enter page" id="page" name="page">
                              </div>
                              <button type="submit" class="btn btn-primary">등록</button>
                              <button type="reset" class="btn btn-primary">취소</button>
