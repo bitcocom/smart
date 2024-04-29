@@ -31,6 +31,7 @@
                <th>가격</th>
                <th>저자</th>
                <th>페이지</th>
+               <th>삭제</th>
              </tr>
            </thead>
            <tbody>
@@ -41,6 +42,7 @@
                <td>${book.price}</td>
                <td>${book.author}</td>
                <td>${book.page}</td>
+               <td><button class="btn btn-sm btn-danger" onclick="location.href='${cpath}/remove/${book.num}'">삭제</button></td>
               </tr>
            </c:forEach>
            </tbody>
