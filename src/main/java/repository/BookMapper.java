@@ -2,6 +2,8 @@ package repository;
 
 import entity.Book;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
 
 import java.util.List;
 
@@ -13,6 +15,8 @@ public interface BookMapper { // BookDAO dao=new BookDAO(); X
     public List<Book> bookList(); // 추상메서드
     public int bookRegister(Book book); // 추상메서드
     public void bookDelete(int num);   // #{num}
+    public Book getByNum(int num);
+    public void bookUpdate(@Param("num") int num, @Param("book") Book book); // Book book(title, price, author, page, num=5)
 }
 /*
                                      제공해준다?
