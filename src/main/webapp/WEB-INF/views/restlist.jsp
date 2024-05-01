@@ -14,6 +14,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="${cpath}/resources/js/list.js"></script>
+  <script>
+         bookList(); // 호출
+  </script>
 </head>
 <body>
 
@@ -46,26 +50,14 @@
                <th>제목</th>
                <th>가격</th>
                <th>저자</th>
-               <th>페이지</th>
-               <th>삭제</th>
+              <th>페이지</th>
              </tr>
            </thead>
-           <tbody>
-           <c:forEach  var="book" items="${list}">
-              <tr>
-               <td>${book.num}</td>
-               <td>${book.title}</td>
-               <td>${book.price}</td>
-               <td>${book.author}</td>
-               <td>${book.page}</td>
-               <td><button class="btn btn-sm btn-danger" onclick="location.href='${cpath}/remove/${book.num}'">삭제</button></td>
-              </tr>
-           </c:forEach>
+           <tbody id="tbody">
+               <!--  여기에 RescController에서 가져온 책 리스트를 출력 -->
            </tbody>
        </table>
-      <c:if test="${!empty dbmem}">
-       <button  class="btn btn-sm btn-danger" onclick="location.href='${cpath}/register'">등록</button>
-      </c:if>
+       <button  class="btn btn-sm btn-danger" onclick="location.href='${cpath}/restregister'">등록</button>
     </div>
     <div class="card-footer">패스트캠퍼스 부트캠프 8기_박매일</div>
   </div>

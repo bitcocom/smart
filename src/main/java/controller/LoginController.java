@@ -27,4 +27,10 @@ public class LoginController {
             }
             return "redirect:/bookList";  // 로그인 화면이 있는 시작페이지
     }
+
+    @PostMapping("/logout")
+    public String logout(HttpSession session){
+          session.invalidate(); // 세션 끊기
+          return "redirect:/bookList";
+    }
 }
